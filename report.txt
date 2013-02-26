@@ -1,0 +1,37 @@
+Greg Paton
+Web Proxy 
+Report
+
+
+
+char* readLine(int clientfd, char* line, int maxlen)
+
+---this was a function provided by the professor to read
+the first line of the HTTP request
+
+
+
+
+int tokenizeRequest(char *request, char **tokens)
+
+---tokenizes and validates the request. Returns 0 for
+a valid request and -1 if the request is neither a
+GET not a HTTP/1.1 request
+
+
+
+
+int writeToLog(char *string, int size)
+
+---writes a string to the proxy.log file. Also checks for
+error. Returns 0 on success and -1 on error.
+
+
+
+
+int parseURI(char *browserRequest, char *domainName, char *proxyRequest, char *serverPort, int maxLen)
+
+---parses the uri with error checking. returns the port number on success and -1 on error.
+
+
+
